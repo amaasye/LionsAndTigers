@@ -14,6 +14,8 @@
 		B0537F3E1A685E8F00DDA0C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0537F3D1A685E8F00DDA0C1 /* Images.xcassets */; };
 		B0537F411A685E8F00DDA0C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0537F3F1A685E8F00DDA0C1 /* LaunchScreen.xib */; };
 		B0537F4D1A685E8F00DDA0C1 /* LionsAndTigersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0537F4C1A685E8F00DDA0C1 /* LionsAndTigersTests.m */; };
+		B0537F581A68608400DDA0C1 /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0537F571A68608400DDA0C1 /* TopViewController.m */; };
+		B0537F5B1A6860E200DDA0C1 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0537F5A1A6860E200DDA0C1 /* HUDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		B0537F461A685E8F00DDA0C1 /* LionsAndTigersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LionsAndTigersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0537F4B1A685E8F00DDA0C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0537F4C1A685E8F00DDA0C1 /* LionsAndTigersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LionsAndTigersTests.m; sourceTree = "<group>"; };
+		B0537F561A68608400DDA0C1 /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopViewController.h; sourceTree = "<group>"; };
+		B0537F571A68608400DDA0C1 /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopViewController.m; sourceTree = "<group>"; };
+		B0537F591A6860E200DDA0C1 /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
+		B0537F5A1A6860E200DDA0C1 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,10 @@
 				B0537F371A685E8F00DDA0C1 /* ViewController.h */,
 				B0537F381A685E8F00DDA0C1 /* ViewController.m */,
 				B0537F3A1A685E8F00DDA0C1 /* Main.storyboard */,
+				B0537F591A6860E200DDA0C1 /* HUDViewController.h */,
+				B0537F5A1A6860E200DDA0C1 /* HUDViewController.m */,
+				B0537F561A68608400DDA0C1 /* TopViewController.h */,
+				B0537F571A68608400DDA0C1 /* TopViewController.m */,
 				B0537F3D1A685E8F00DDA0C1 /* Images.xcassets */,
 				B0537F3F1A685E8F00DDA0C1 /* LaunchScreen.xib */,
 				B0537F301A685E8F00DDA0C1 /* Supporting Files */,
@@ -219,6 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0537F5B1A6860E200DDA0C1 /* HUDViewController.m in Sources */,
+				B0537F581A68608400DDA0C1 /* TopViewController.m in Sources */,
 				B0537F391A685E8F00DDA0C1 /* ViewController.m in Sources */,
 				B0537F361A685E8F00DDA0C1 /* AppDelegate.m in Sources */,
 				B0537F331A685E8F00DDA0C1 /* main.m in Sources */,

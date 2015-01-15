@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "TopViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <TopDelegate>
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lionLeftConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lionRightConstraint;
+
 
 @end
 
@@ -16,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
 
 
