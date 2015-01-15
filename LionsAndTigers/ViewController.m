@@ -12,6 +12,7 @@
 @interface ViewController () <TopDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lionLeftConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lionRightConstraint;
+@property (strong, nonatomic) IBOutlet NSObject *topContainer;
 
 
 @end
@@ -20,8 +21,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
 }
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.identifier isEqualToString:@"viewSegue"]) {
+
+}
+
+
+
+}
+
 
 
 @end

@@ -20,13 +20,13 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9K-6L-tmz" userLabel="Tiger Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
-                                    <segue destination="tKX-um-xTd" kind="embed" id="YH1-Ju-MoE"/>
+                                    <segue destination="tKX-um-xTd" kind="embed" identifier="viewSegue" id="YH1-Ju-MoE"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZS-Pu-aPi" userLabel="Lion Container View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <connections>
-                                    <segue destination="bso-si-N5i" kind="embed" id="fEu-Cb-Ekr"/>
+                                    <segue destination="bso-si-N5i" kind="embed" identifier="bottomSegue" id="fEu-Cb-Ekr"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -47,6 +47,7 @@
                         <outlet property="lionRightConstraint" destination="OYM-ha-1RY" id="H4Y-93-2Xh"/>
                         <outlet property="tigerLeftConstraint" destination="ABz-98-G6x" id="2q9-iQ-xEY"/>
                         <outlet property="tigetRightConstraint" destination="wET-sx-WpG" id="BaR-5t-Wp0"/>
+                        <outlet property="topContainer" destination="jyV-Pf-zRb" id="Fvc-1E-MGD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
