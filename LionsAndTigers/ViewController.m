@@ -19,8 +19,8 @@
 @implementation ViewController
 
 -(void)topRevealButtonTapped:(TopViewController *)top {
-    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant - 150.0;
-    self.lionRightConstraint.constant = self.lionRightConstraint.constant + 150.0;
+    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant + 175.0;
+    self.lionRightConstraint.constant = self.lionRightConstraint.constant - 175.0;
 
     
 }
