@@ -7,17 +7,25 @@
 //
 
 #import "TopViewController.h"
+#import "CustomCollectionViewCell.h"
 
-@interface TopViewController () 
+@interface TopViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property CGFloat *topViewStartingWidth;
 @property CGFloat *HUDViewStartingLeadingConstant;
+@property NSMutableArray *lionImagesArray;
+@property NSMutableArray *tigerImagesArray;
 @end
 
 @implementation TopViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.lionImagesArray = [NSMutableArray new];
+    [self.lionImagesArray addObject:[UIImage imageNamed:@"lion_1"]];
+
+
+
 }
 
 
@@ -27,6 +35,18 @@
 
 }
 
+- (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 1;
+}
+
+
+-(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.imageView.image = [self.lionImagesArray objectAtIndex:indexPath.row];
+
+    return cell;
+}
 
 
 

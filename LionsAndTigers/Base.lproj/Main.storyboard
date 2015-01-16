@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -101,7 +101,53 @@
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rnu-aZ-0Co">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hI5-Co-NeZ">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q7K-nm-xZf">
+                                    <size key="itemSize" width="169" height="143"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="0wc-8l-L7A" customClass="CustomCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="169" height="143"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lion_1" translatesAutoresizingMaskIntoConstraints="NO" id="tw1-Dh-msc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="169" height="143"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="tw1-Dh-msc" secondAttribute="trailing" constant="-8" id="KOO-yJ-HYR"/>
+                                            <constraint firstItem="tw1-Dh-msc" firstAttribute="leading" secondItem="0wc-8l-L7A" secondAttribute="leadingMargin" constant="-8" id="b3b-rW-Y6d"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="tw1-Dh-msc" secondAttribute="bottom" constant="-8" id="prG-mj-uDS"/>
+                                            <constraint firstItem="tw1-Dh-msc" firstAttribute="top" secondItem="0wc-8l-L7A" secondAttribute="topMargin" constant="-8" id="yAR-r1-pdi"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="tw1-Dh-msc" id="eyh-DQ-p8q"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="NjS-Cf-ueM" id="COw-IO-ZUp"/>
+                                    <outlet property="delegate" destination="NjS-Cf-ueM" id="Sts-dg-wZk"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hI5-Co-NeZ" secondAttribute="trailing" constant="-16" id="3dw-Fx-X13"/>
+                            <constraint firstItem="1dJ-E6-Iog" firstAttribute="top" secondItem="hI5-Co-NeZ" secondAttribute="bottom" id="hmA-ES-YvN"/>
+                            <constraint firstItem="hI5-Co-NeZ" firstAttribute="leading" secondItem="rnu-aZ-0Co" secondAttribute="leadingMargin" constant="-16" id="rOh-9h-e4h"/>
+                            <constraint firstItem="hI5-Co-NeZ" firstAttribute="top" secondItem="URf-si-yKE" secondAttribute="bottom" id="xMk-vt-ahn"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="m6d-c7-tQd">
@@ -114,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9MG-bl-GRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="497" y="690"/>
+            <point key="canvasLocation" x="535" y="695"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xOi-z3-YVt">
@@ -135,6 +181,9 @@
             <point key="canvasLocation" x="121" y="690"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lion_1" width="347" height="346"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
