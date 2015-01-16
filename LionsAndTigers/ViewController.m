@@ -12,22 +12,32 @@
 @interface ViewController () <TopDelegate>
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lionLeftConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lionRightConstraint;
-@property (strong, nonatomic) IBOutlet NSObject *topContainer;
 
 
 @end
 
 @implementation ViewController
 
+-(void)topRevealButtonTapped:(TopViewController *)top {
+    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant - 150.0;
+    self.lionRightConstraint.constant = self.lionRightConstraint.constant + 150.0;
+
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-    if ([segue.identifier isEqualToString:@"viewSegue"]) {
+    if ([segue.identifier isEqualToString:@"bottomSegue"]) {
 
-}
+        UINavigationController *navVC = segue.destinationViewController;
+        TopViewController *topVC = navVC.viewControllers[0];
+        topVC.delegate = self;
+        
+
+    }
 
 
 

@@ -13,7 +13,7 @@
 @end
 
 @interface HUDViewController : UIViewController
--(void)tigersButtonTapped;
--(void)lionsButtonTapped;
+//-(void)tigersButtonTapped;
+//-(void)lionsButtonTapped;
 
 @end
