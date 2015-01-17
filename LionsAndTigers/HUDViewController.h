@@ -7,13 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol HUDDelegate
+@class HUDViewController;
 
+@protocol HUDDelegate
+-(void)tigersButtonWasTapped:(HUDViewController *)tigerViewController;
+-(void)lionsButtonWasTapped:(HUDViewController *)lionViewController;
 
 @end
 
 @interface HUDViewController : UIViewController
-//-(void)tigersButtonTapped;
-//-(void)lionsButtonTapped;
+
+
+@property id <HUDDelegate> delegate;
 
 @end

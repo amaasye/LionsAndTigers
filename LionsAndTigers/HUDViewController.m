@@ -20,10 +20,13 @@
 
 
 - (IBAction)onLionsButtonTapped:(UIButton *)sender {
+    [self.delegate lionsButtonWasTapped:self];
 }
 
 
 - (IBAction)onTigersButtonTapped:(UIButton *)sender {
+    [self.delegate tigersButtonWasTapped:self];
+
 }
 
 

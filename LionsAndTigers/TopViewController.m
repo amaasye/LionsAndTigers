@@ -13,20 +13,30 @@
 
 @property CGFloat *topViewStartingWidth;
 @property CGFloat *HUDViewStartingLeadingConstant;
-@property NSMutableArray *lionImagesArray;
-@property NSMutableArray *tigerImagesArray;
+@property NSMutableArray *photosArray;
+@property NSMutableArray *lionsArray;
+@property NSMutableArray *tigersArray;
 @end
 
 @implementation TopViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.lionImagesArray = [NSMutableArray new];
-    [self.lionImagesArray addObject:[UIImage imageNamed:@"lion_1"]];
+    self.lionsArray = [NSMutableArray new];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lion_1"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lion_2"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lion_3"]];
 
+    self.tigersArray = [NSMutableArray new];
+    [self.tigersArray addObject:[UIImage imageNamed:@"tiger1"]];
+    [self.tigersArray addObject:[UIImage imageNamed:@"tiger2"]];
+    [self.tigersArray addObject:[UIImage imageNamed:@"tiger3"]];
+
+    self.photosArray = self.lionsArray;
 
 
 }
+
 
 
 - (IBAction)onTopRevealButtonTapped:(UIBarButtonItem *)sender {
@@ -36,14 +46,14 @@
 }
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 1;
+    return self.photosArray.count;
 }
 
 
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.imageView.image = [self.lionImagesArray objectAtIndex:indexPath.row];
+    cell.imageView.image = [self.photosArray objectAtIndex:indexPath.row];
 
     return cell;
 }

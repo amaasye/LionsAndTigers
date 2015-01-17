@@ -66,6 +66,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DS3-Fx-PNO">
                                 <rect key="frame" x="22" y="83" width="64" height="30"/>
                                 <state key="normal" title="Lions">
+                                    <color key="titleColor" red="0.137159584" green="0.204517016" blue="0.62870896460000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -75,6 +76,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTf-Y0-CcJ">
                                 <rect key="frame" x="22" y="134" width="64" height="30"/>
                                 <state key="normal" title="Tigers">
+                                    <color key="titleColor" red="0.137159584" green="0.204517016" blue="0.62870896460000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -82,7 +84,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.65305101259999998" blue="0.1977851367" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -104,6 +106,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hI5-Co-NeZ">
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <color key="backgroundColor" red="0.137159584" green="0.204517016" blue="0.62870896460000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q7K-nm-xZf">
                                     <size key="itemSize" width="169" height="143"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -182,7 +185,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="lion_1" width="347" height="346"/>
+        <image name="lion_1" width="173" height="173"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
