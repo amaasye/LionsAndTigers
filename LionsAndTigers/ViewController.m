@@ -19,23 +19,6 @@
 
 @implementation ViewController
 
--(void)topRevealButtonTapped:(TopViewController *)top {
-
-    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant + 175.0;
-    self.lionRightConstraint.constant = self.lionRightConstraint.constant - 175.0;
-
-//    if (self.lionLeftConstraint.constant == self.lionLeftConstraint.constant + 175.0) {
-//        self.editing == false;
-//    }
-}
-
--(void)tigersButtonWasTapped:(HUDViewController *)tigerViewController {
-
-}
-
--(void)lionsButtonWasTapped:(HUDViewController *)lionViewController {
-
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,19 +26,44 @@
 }
 
 
+-(void)topRevealButtonTapped {
+
+    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant + 175.0;
+    self.lionRightConstraint.constant = self.lionRightConstraint.constant - 175.0;
+
+    //    if (self.lionLeftConstraint.constant == self.lionLeftConstraint.constant + 175.0) {
+    //        self.editing == false;
+    //    }
+}
+
+
+-(void)lionsButtonWasTapped {
+    // TopViewController *topViewController;
+    [self.topViewController showLions];
+}
+
+-(void)tigersButtonWasTapped {
+    [self.topViewController showTigers];
+}
+
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
-    if ([segue.identifier isEqualToString:@"bottomSegue"]) {
+    if ([segue.identifier isEqualToString:@"topSegue"]) {
 
         UINavigationController *navVC = segue.destinationViewController;
-        TopViewController *topVC = navVC.viewControllers[0];
-        topVC.delegate = self;
+        self.topViewController = [navVC.childViewControllers objectAtIndex:0];
+        self.topViewController.delegate = self;
 
     }
 
-
+    else if ([segue.identifier isEqualToString:@"hudSegue"]) {
+        HUDViewController *hudVC = segue.destinationViewController;
+        hudVC.delegate = self;
+    }
 
 }
+
 
 
 

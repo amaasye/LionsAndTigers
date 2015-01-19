@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TopViewController.h"
 
 @interface ViewController : UIViewController
+@property TopViewController *topViewController;
 
 
 @end

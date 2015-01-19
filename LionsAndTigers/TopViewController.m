@@ -16,32 +16,44 @@
 @property NSMutableArray *photosArray;
 @property NSMutableArray *lionsArray;
 @property NSMutableArray *tigersArray;
+@property HUDViewController *hudViewController;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end
 
 @implementation TopViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.lionsArray = [NSMutableArray new];
-    [self.lionsArray addObject:[UIImage imageNamed:@"lion_1"]];
-    [self.lionsArray addObject:[UIImage imageNamed:@"lion_2"]];
-    [self.lionsArray addObject:[UIImage imageNamed:@"lion_3"]];
+    [self showLions];
 
+}
+
+-(void)showTigers {
     self.tigersArray = [NSMutableArray new];
     [self.tigersArray addObject:[UIImage imageNamed:@"tiger1"]];
     [self.tigersArray addObject:[UIImage imageNamed:@"tiger2"]];
     [self.tigersArray addObject:[UIImage imageNamed:@"tiger3"]];
 
+    self.photosArray = self.tigersArray;
+    [self.collectionView reloadData];
+
+}
+
+-(void)showLions {
+    self.lionsArray = [NSMutableArray new];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lion_1"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lions_2"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lion_3"]];
+
     self.photosArray = self.lionsArray;
+    [self.collectionView reloadData];
 
 
 }
 
-
-
 - (IBAction)onTopRevealButtonTapped:(UIBarButtonItem *)sender {
-    [self.delegate topRevealButtonTapped: self];
-
+    [self.delegate topRevealButtonTapped];
 
 }
 

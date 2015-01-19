@@ -69,6 +69,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B033A17D1A69FA8C007CB505 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B0537F371A685E8F00DDA0C1 /* ViewController.h */,
+				B0537F381A685E8F00DDA0C1 /* ViewController.m */,
+				B0537F591A6860E200DDA0C1 /* HUDViewController.h */,
+				B0537F5A1A6860E200DDA0C1 /* HUDViewController.m */,
+				B0537F561A68608400DDA0C1 /* TopViewController.h */,
+				B0537F571A68608400DDA0C1 /* TopViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		B0537F241A685E8F00DDA0C1 = {
 			isa = PBXGroup;
 			children = (
@@ -90,17 +103,12 @@
 		B0537F2F1A685E8F00DDA0C1 /* LionsAndTigers */ = {
 			isa = PBXGroup;
 			children = (
+				B033A17D1A69FA8C007CB505 /* View Controllers */,
 				B0537F341A685E8F00DDA0C1 /* AppDelegate.h */,
 				B0537F351A685E8F00DDA0C1 /* AppDelegate.m */,
-				B0537F371A685E8F00DDA0C1 /* ViewController.h */,
-				B0537F381A685E8F00DDA0C1 /* ViewController.m */,
 				B0537F3A1A685E8F00DDA0C1 /* Main.storyboard */,
 				B033A13F1A68D483007CB505 /* CustomCollectionViewCell.h */,
 				B033A1401A68D483007CB505 /* CustomCollectionViewCell.m */,
-				B0537F591A6860E200DDA0C1 /* HUDViewController.h */,
-				B0537F5A1A6860E200DDA0C1 /* HUDViewController.m */,
-				B0537F561A68608400DDA0C1 /* TopViewController.h */,
-				B0537F571A68608400DDA0C1 /* TopViewController.m */,
 				B0537F3D1A685E8F00DDA0C1 /* Images.xcassets */,
 				B0537F3F1A685E8F00DDA0C1 /* LaunchScreen.xib */,
 				B0537F301A685E8F00DDA0C1 /* Supporting Files */,

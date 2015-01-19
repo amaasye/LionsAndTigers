@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TopViewController.h"
+
 @class HUDViewController;
 
 @protocol HUDDelegate
--(void)tigersButtonWasTapped:(HUDViewController *)tigerViewController;
--(void)lionsButtonWasTapped:(HUDViewController *)lionViewController;
+-(void)tigersButtonWasTapped;
+-(void)lionsButtonWasTapped;
 
 @end
 

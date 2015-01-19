@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HUDViewController.h"
+
 @class TopViewController;
 
 @protocol TopDelegate
--(void)topRevealButtonTapped: (TopViewController *)top;
+-(void)topRevealButtonTapped;
 
 @end
 
 @interface TopViewController : UIViewController
+-(void)showTigers;
+-(void)showLions;
 
 @property id<TopDelegate> delegate;
 
