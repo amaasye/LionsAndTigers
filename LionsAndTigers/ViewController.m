@@ -10,9 +10,17 @@
 #import "TopViewController.h"
 #import "HUDViewController.h"
 
-@interface ViewController () <TopDelegate, HUDDelegate>
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lionLeftConstraint;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *lionRightConstraint;
+@interface ViewController () <TopDelegate, HUDDelegate, UICollisionBehaviorDelegate>
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *rightConstraint;
+
+@property UICollisionBehavior *collisionBehavior;
+@property UIDynamicItemBehavior *dynamicsItemBehavior;
+@property UIGravityBehavior *gravityBehavior;
+@property UIPushBehavior *pushBehavior;
+@property UIDynamicAnimator *dynamicsAnimator;
+@property (nonatomic, readonly) BOOL isOpen;
+
 
 
 @end
@@ -25,27 +33,44 @@
 
 }
 
+-(BOOL) isOpen {
+    return  self.rightConstraint != 0;
+}
 
 -(void)topRevealButtonTapped {
-
-    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant + 175.0;
-    self.lionRightConstraint.constant = self.lionRightConstraint.constant - 175.0;
+    if (self.isOpen)
+    {
+        [self.rightConstraint setConstant:-self.view.bounds.size.width * .45];
+        [self.leftConstraint setConstant:self.view.bounds.size.width * .55];
+    }
+    else
+    {
+        [self.rightConstraint setConstant:0];
+        [self.leftConstraint setConstant:0];
+    }
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.view layoutIfNeeded];
+    }];
 
 }
 
 
 -(void)lionsButtonWasTapped {
-    // TopViewController *topViewController;
     [self.topViewController showLions];
-    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant;
-    self.lionRightConstraint.constant = self.lionRightConstraint.constant;
+    [self.rightConstraint setConstant:0 - 55];
+    [self.leftConstraint setConstant:0 - 55];
+//    self.leftConstraint.constant = self.leftConstraint.constant;
+//    self.rightConstraint.constant = self.rightConstraint.constant;
 
 }
 
 -(void)tigersButtonWasTapped {
     [self.topViewController showTigers];
-    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant;
-    self.lionRightConstraint.constant = self.lionRightConstraint.constant;
+    [self.rightConstraint setConstant:0 - 55];
+    [self.leftConstraint setConstant:0 - 55];
+//    self.leftConstraint.constant = self.leftConstraint.constant;
+//    self.rightConstraint.constant = self.rightConstraint.constant;
 
 }
 

@@ -43,8 +43,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lionLeftConstraint" destination="CZx-yU-oOl" id="Rz0-D7-YGn"/>
-                        <outlet property="lionRightConstraint" destination="OYM-ha-1RY" id="H4Y-93-2Xh"/>
+                        <outlet property="leftConstraint" destination="CZx-yU-oOl" id="LUD-ou-sMw"/>
+                        <outlet property="rightConstraint" destination="OYM-ha-1RY" id="wEh-jg-LKx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="121" y="66"/>
         </scene>
-        <!--Top View Controller-->
+        <!--Lions and Tigers-->
         <scene sceneID="sZd-Oi-dCh">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="NjS-Cf-ueM" customClass="TopViewController" sceneMemberID="viewController">
@@ -155,8 +155,9 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="m6d-c7-tQd">
+                    <navigationItem key="navigationItem" title="Lions and Tigers" id="m6d-c7-tQd">
                         <barButtonItem key="leftBarButtonItem" title="≡" style="done" id="gut-ac-ybG">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onTopRevealButtonTapped:" destination="NjS-Cf-ueM" id="je4-E3-g44"/>
                             </connections>
