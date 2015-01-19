@@ -31,19 +31,22 @@
     self.lionLeftConstraint.constant = self.lionLeftConstraint.constant + 175.0;
     self.lionRightConstraint.constant = self.lionRightConstraint.constant - 175.0;
 
-    //    if (self.lionLeftConstraint.constant == self.lionLeftConstraint.constant + 175.0) {
-    //        self.editing == false;
-    //    }
 }
 
 
 -(void)lionsButtonWasTapped {
     // TopViewController *topViewController;
     [self.topViewController showLions];
+    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant;
+    self.lionRightConstraint.constant = self.lionRightConstraint.constant;
+
 }
 
 -(void)tigersButtonWasTapped {
     [self.topViewController showTigers];
+    self.lionLeftConstraint.constant = self.lionLeftConstraint.constant;
+    self.lionRightConstraint.constant = self.lionRightConstraint.constant;
+
 }
 
 

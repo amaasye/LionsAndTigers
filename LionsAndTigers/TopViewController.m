@@ -34,6 +34,11 @@
     [self.tigersArray addObject:[UIImage imageNamed:@"tiger1"]];
     [self.tigersArray addObject:[UIImage imageNamed:@"tiger2"]];
     [self.tigersArray addObject:[UIImage imageNamed:@"tiger3"]];
+    [self.tigersArray addObject:[UIImage imageNamed:@"tigers4"]];
+    [self.tigersArray addObject:[UIImage imageNamed:@"tigers5"]];
+    [self.tigersArray addObject:[UIImage imageNamed:@"tigers6"]];
+    [self.tigersArray addObject:[UIImage imageNamed:@"tigers7"]];
+    [self.tigersArray addObject:[UIImage imageNamed:@"tigers8"]];
 
     self.photosArray = self.tigersArray;
     [self.collectionView reloadData];
@@ -42,9 +47,14 @@
 
 -(void)showLions {
     self.lionsArray = [NSMutableArray new];
-    [self.lionsArray addObject:[UIImage imageNamed:@"lion_1"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lions_1"]];
     [self.lionsArray addObject:[UIImage imageNamed:@"lions_2"]];
-    [self.lionsArray addObject:[UIImage imageNamed:@"lion_3"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lions_3"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lions_4"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lions_5"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lions_6"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lions_7"]];
+    [self.lionsArray addObject:[UIImage imageNamed:@"lions_8"]];
 
     self.photosArray = self.lionsArray;
     [self.collectionView reloadData];
