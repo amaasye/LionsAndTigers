@@ -34,22 +34,23 @@
 }
 
 -(BOOL) isOpen {
-    return  self.rightConstraint != 0;
+    return  self.rightConstraint.constant > -16.0;
 }
 
 -(void)topRevealButtonTapped {
     if (self.isOpen)
     {
-        [self.rightConstraint setConstant:-self.view.bounds.size.width * .45];
-        [self.leftConstraint setConstant:self.view.bounds.size.width * .55];
+        [self.rightConstraint setConstant:-16.0];
+        [self.leftConstraint setConstant:-16.0];
     }
     else
     {
-        [self.rightConstraint setConstant:0];
-        [self.leftConstraint setConstant:0];
+        [self.rightConstraint setConstant:-self.view.bounds.size.width * .45];
+        [self.leftConstraint setConstant:self.view.bounds.size.width * .55];
+
     }
-    
-    [UIView animateWithDuration:0.3 animations:^{
+
+    [UIView animateWithDuration:1.0 animations:^{
         [self.view layoutIfNeeded];
     }];
 
@@ -60,8 +61,6 @@
     [self.topViewController showLions];
     [self.rightConstraint setConstant:0 - 55];
     [self.leftConstraint setConstant:0 - 55];
-//    self.leftConstraint.constant = self.leftConstraint.constant;
-//    self.rightConstraint.constant = self.rightConstraint.constant;
 
 }
 
@@ -69,8 +68,6 @@
     [self.topViewController showTigers];
     [self.rightConstraint setConstant:0 - 55];
     [self.leftConstraint setConstant:0 - 55];
-//    self.leftConstraint.constant = self.leftConstraint.constant;
-//    self.rightConstraint.constant = self.rightConstraint.constant;
 
 }
 
@@ -78,14 +75,14 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
     if ([segue.identifier isEqualToString:@"topSegue"]) {
-
+        // Tell topViewController that I (ViewController) will be it's delegate
         UINavigationController *navVC = segue.destinationViewController;
         self.topViewController = [navVC.childViewControllers objectAtIndex:0];
         self.topViewController.delegate = self;
 
     }
-
-    else if ([segue.identifier isEqualToString:@"hudSegue"]) {
+        // Tell HUDViewController that I (ViewController) will be it's delegate
+        else if ([segue.identifier isEqualToString:@"hudSegue"]) {
         HUDViewController *hudVC = segue.destinationViewController;
         hudVC.delegate = self;
     }

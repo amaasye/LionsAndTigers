@@ -31,6 +31,7 @@
 }
 
 -(void)showTigers {
+    // Initlize an array filled with tigers for the collection view
     self.tigersArray = [NSMutableArray new];
     [self.tigersArray addObject:[UIImage imageNamed:@"tiger1"]];
     [self.tigersArray addObject:[UIImage imageNamed:@"tiger2"]];
@@ -42,11 +43,14 @@
     [self.tigersArray addObject:[UIImage imageNamed:@"tigers8"]];
 
     self.photosArray = self.tigersArray;
+    // Shut the topViewController
+   // [self.delegate topRevealButtonTapped];
     [self.collectionView reloadData];
 
 }
 
 -(void)showLions {
+    // Initlize an array filled with lions for the collection view
     self.lionsArray = [NSMutableArray new];
     [self.lionsArray addObject:[UIImage imageNamed:@"lions_1"]];
     [self.lionsArray addObject:[UIImage imageNamed:@"lions_2"]];
@@ -58,12 +62,15 @@
     [self.lionsArray addObject:[UIImage imageNamed:@"lions_8"]];
 
     self.photosArray = self.lionsArray;
+    // Shut the topViewController
+    // [self.delegate topRevealButtonTapped];
     [self.collectionView reloadData];
 
 
 }
 
 - (IBAction)onTopRevealButtonTapped:(UIBarButtonItem *)sender {
+    //tell my delegate that I pressed the burger button
     [self.delegate topRevealButtonTapped];
 
 }
